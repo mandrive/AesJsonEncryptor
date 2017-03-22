@@ -1,40 +1,29 @@
-﻿using AesJsonEncryptor.Console.Model;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
+using System;
 
-namespace AesJsonEncryptor.Console
+namespace AesCrypt.DemoConsole
 {
     class Program
     {
         static void Main(string[] args)
         {
-            var aesJsonEncryptor = new AesJsonEncryptor();
-            var groupsArray = new GroupsArray()
-            {
-                Groups = new int[2] { 1, 2 }
-            };
+            Console.WriteLine("Provide any string:");
+            var line = Console.ReadLine();
 
-            var encryptedString = aesJsonEncryptor.Encrypt(JsonConvert.SerializeObject(
-                groupsArray,
-                Formatting.Indented,
-                new JsonSerializerSettings
-                {
-                    ContractResolver = new CamelCasePropertyNamesContractResolver()
-                }
-            ));
+            var aesCrypt = new AesCrypt();
+            var encryptedString = aesCrypt.Encrypt(line);
+            var decryptedString = aesCrypt.Decrypt(encryptedString);
 
-            var decryptedString = aesJsonEncryptor.Decrypt(encryptedString);
+            Console.WriteLine("Encrypted value: ");
+            Console.WriteLine();
+            Console.WriteLine(encryptedString);
+            Console.WriteLine("Decrypted value: ");
+            Console.WriteLine();
+            Console.WriteLine(decryptedString);
 
-            var deserializedGroupsArray = JsonConvert.DeserializeObject<GroupsArray>(decryptedString,
-                new JsonSerializerSettings
-                {
-                    ContractResolver = new CamelCasePropertyNamesContractResolver()
-                });
-
-            System.Console.WriteLine(encryptedString);
-            System.Console.WriteLine(decryptedString);
-
-            System.Console.ReadKey();
+            Console.WriteLine("Press any key to exit...");
+            Console.ReadKey();
         }
     }
 }

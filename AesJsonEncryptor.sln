@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AesJsonEncryptor.Console", "AesJsonEncryptor.Console\AesJsonEncryptor.Console.csproj", "{3854E2B9-F3B8-401D-8C84-A70479BE7090}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AesCrypt.DemoConsole", "AesJsonEncryptor.Console\AesCrypt.DemoConsole.csproj", "{3854E2B9-F3B8-401D-8C84-A70479BE7090}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AesJsonEncryptor", "AesJsonEncryptor\AesJsonEncryptor.csproj", "{D848B900-9AF0-4E8E-89E4-B0BE8B786F9A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AesCrypt", "AesJsonEncryptor\AesCrypt.csproj", "{D848B900-9AF0-4E8E-89E4-B0BE8B786F9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AesCrypt.Tests", "AesCrypt.Tests\AesCrypt.Tests.csproj", "{57423F38-916C-4FDD-8A3B-551511BD9FF4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{D848B900-9AF0-4E8E-89E4-B0BE8B786F9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D848B900-9AF0-4E8E-89E4-B0BE8B786F9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D848B900-9AF0-4E8E-89E4-B0BE8B786F9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57423F38-916C-4FDD-8A3B-551511BD9FF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57423F38-916C-4FDD-8A3B-551511BD9FF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57423F38-916C-4FDD-8A3B-551511BD9FF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57423F38-916C-4FDD-8A3B-551511BD9FF4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
